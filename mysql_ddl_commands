@@ -1,0 +1,16 @@
+SELECT User, Host FROM mysql.user;
+
+CREATE USER 'animaker'@'localhost' IDENTIFIED BY 'animaker';
+GRANT ALL PRIVILEGES ON *.* TO 'animaker'@'localhost';
+FLUSH PRIVILEGES;
+
+SELECT User, Host FROM mysql.user;
+
+CREATE DATABASE animaker_db;
+
+/*
+update .env file
+set DB_DATABASE=animaker_db
+set DB_USERNAME=animaker
+set DB_PASSWORD=animaker
+*/

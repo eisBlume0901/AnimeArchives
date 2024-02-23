@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Anime {
+class AnimeList {
     public static function all() {
         return [
             [
