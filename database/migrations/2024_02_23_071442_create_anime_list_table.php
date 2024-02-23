@@ -14,12 +14,15 @@ return new class extends Migration
         Schema::create('anime_list', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author');
-            $table->text('description');
-            $table->text('genre');
+            $table->longText('description');
+            $table->integer('episodes');
+            $table->text('genres');
             $table->date('start_aired_date');
             $table->date('end_aired_date');
+            $table->string('broadcast');
+            $table->string('studios');
             $table->string('website');
+            $table->string('streaming platforms');
             $table->timestamps();
         });
     }

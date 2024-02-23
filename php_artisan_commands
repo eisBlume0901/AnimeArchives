@@ -1,0 +1,98 @@
+Technical explanation:
+php artisan config:cache - takes all the configuration files and caches them into one file,
+which is loaded quickly by the framework.
+
+Use when?
+1. After changing any configuration file, you should run this command to cache the configuration files.
+2. When you deploy your application to a server, you should run this command to cache the configuration files.
+3. When you install a new package, you should run this command to cache the configuration files.
+4. When you update the .env file, you should run this command to cache the configuration files.
+5. When you update the composer.json file, you should run this command to cache the configuration files.
+
+
+php artisan make:migration create_table_name_table - use to create a new migration file.
+It generates a new migration file.
+
+Use when?
+1. When you want to create a new migration file, you should run this command.
+2. When you want to create a new table, you should run this command.
+3. When you want to add a new column to the table, you should run this command.
+4. When you want to modify the column of the table, you should run this command.
+5. When you want to drop the column of the table, you should run this command.
+
+
+php artisan db:seed - use to seed the database particularly the users table with the default user. It generates
+a default user with the email and password specified in the UserTableSeeder.php file.
+
+Use when?
+1. After migrating the database, you should run this command to seed the database with the default user.
+2. When you want to seed the database with the default user, you should run this command.
+
+
+
+php artisan migrate:refresh - use to rollback all the migrations and then migrate the database again. It is useful
+when you want to reset the database and start from scratch.
+
+Use when?
+1. When you want to truncate the table and then migrate the database again, you should run this command.
+2. When you want to reset the database and start from scratch, you should run this command.
+
+
+
+php artisan migrate:refresh --seed - use to rollback all the migrations, migrate the database again, and then seed the
+database with the default user. It is useful when you want to reset the database and start from scratch.
+
+Use when?
+1. When you want to truncate the table, migrate the database again, and then seed the database with the default user,
+you should run this command.
+
+
+
+php artisan make:model ModelName - use to create a new model. It generates a new model file in the app/Models directory.
+It uses Eloquent ORM to interact with the database.
+
+Use when?
+1. When you want to create a new model, you should run this command.
+2. When you want to create a new model with the migration file, you should run this command.
+3. When you want to create a new model with the factory file, you should run this command.
+4. When you want to create a new model with the seeder file, you should run this command.
+
+
+
+php artisan serve - use to start the development server. It starts the development server at http://127.0.0.1:8000.
+
+Use when?
+1. When you want to access the application in the browser, you should run this command.
+2. When you want to test the application, you should run this command.
+
+
+
+Migration - is a way to define the structure of the database. It is a file that contains the schema of the database.
+Seeder - populates the database with the default data. It is a file that contains the default data of the database.
+
+
+Layman's term explanation:
+php artisan config:cache - This command is like a librarian who gathers all the books (configuration files) in a library
+(your Laravel application) and combines them into a single book (a cache file). This makes it quicker and easier for the
+librarian (Laravel) to find the information it needs.
+
+php artisan make:migration create_table_name_table - This command is like a blueprint maker. It creates a blueprint
+(migration file) for a new building (database table). The blueprint describes how the building should be constructed.
+
+php artisan db:seed - This command is like a gardener planting seeds (data) in a garden (database). The seeds grow into
+plants (data entries) that can be used for various purposes.
+
+php artisan migrate:refresh - This command is like a demolition crew and a construction crew in one. It first demolishes
+ all the buildings (database tables) and then rebuilds them according to the blueprints (migration files).
+
+php artisan migrate:refresh --seed - This command is like a demolition crew, a construction crew, and a gardener in one.
+It demolishes all the buildings (database tables), rebuilds them, and then plants seeds (data) in the new buildings.
+
+php artisan make:model ModelName - This command is like a sculptor. It creates a new sculpture (model) that represents
+a real-world object or concept in your application.
+
+php artisan serve - This command is like opening the doors to a shop. It starts the server, allowing people (users)
+to visit your application.
+
+Migration - This is like a blueprint for a building. It describes how a database table should be constructed.
+Seeder - This is like a packet of seeds. It contains data that can be planted in a database.
