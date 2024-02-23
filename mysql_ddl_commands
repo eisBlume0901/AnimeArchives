@@ -1,16 +1,14 @@
 SELECT User, Host FROM mysql.user;
 
-CREATE USER 'animaker'@'localhost' IDENTIFIED BY 'animaker';
-GRANT ALL PRIVILEGES ON *.* TO 'animaker'@'localhost';
+CREATE USER 'animeArchives'@'localhost' IDENTIFIED BY 'animeArchives';
+GRANT ALL PRIVILEGES ON *.* TO 'animeArchives'@'localhost';
 FLUSH PRIVILEGES;
 
-SELECT User, Host FROM mysql.user;
-
-CREATE DATABASE animaker_db;
+CREATE DATABASE anime_archives_db;
 
 /*
 update .env file
-set DB_DATABASE=animaker_db
-set DB_USERNAME=animaker
-set DB_PASSWORD=animaker
+set DB_DATABASE=anime_archives_db
+set DB_USERNAME=animeArchives
+set DB_PASSWORD=animeArchives
 */
