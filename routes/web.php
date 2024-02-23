@@ -31,6 +31,6 @@ Route::get('/', function () {
     return view('animeList',
         [
         'heading' => 'List of Latest AnimeList',
-        'animeLists' => AnimeList::all()
+        'animeList' => AnimeList::all()
         ]);
 });

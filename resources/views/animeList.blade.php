@@ -1,10 +1,10 @@
 <h1>{{$heading}}</h1>
 
-@if(count($animeLists) == 0)
+@if(count($animeList) == 0)
     <h2>No listings found</h2>
 @endif
 
-@foreach ($animeLists as $animeElement)
+@foreach ($animeList as $animeElement)
     <h2>
         <a href="/anime/{{$animeElement['id']}}">{{$animeElement['title']}}</a>
     </h2>
