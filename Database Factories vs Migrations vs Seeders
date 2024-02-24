@@ -1,0 +1,14 @@
+Database
+
+Migrations - define the structure of the respective tables
+- This is where you create new tables, add columns to existing tables, or modify existing columns
+- Migrations are a way to make database changes, and they can be rolled back if needed
+- php artisan make:migration create_users_table
+
+Factories - generate large amounts of database records
+- Factories are a way to generate fake data for testing purposes
+- php artisan make:factory UserFactory
+
+Seeders - populate the database with data
+- It is useful for testing or initial data required for the application like roles, permissions, etc.
+- php artisan make:seeder UsersTableSeeder
