@@ -70,7 +70,7 @@ Use when?
 Migration - is a way to define the structure of the database. It is a file that contains the schema of the database.
 Seeder - populates the database with the default data. It is a file that contains the default data of the database.
 
-
+------------------------------------------------------------------------------------------------------------------------
 Layman's term explanation:
 php artisan config:cache - This command is like a librarian who gathers all the books (configuration files) in a library
 (your Laravel application) and combines them into a single book (a cache file). This makes it quicker and easier for the
@@ -96,3 +96,5 @@ to visit your application.
 
 Migration - This is like a blueprint for a building. It describes how a database table should be constructed.
 Seeder - This is like a packet of seeds. It contains data that can be planted in a database.
+Rollback - This is like undoing a change. It reverts the database to a previous state.
+Refresh - This is like starting over. It reverts the database to its original state and then applies all the migrations again.
