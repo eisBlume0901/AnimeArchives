@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('content')
+
 <h1>{{$heading}}</h1>
 
 @if(count($animeList) == 0)
@@ -10,3 +14,5 @@
     </h2>
     <p>{{$animeElement['description']}}</p>
 @endforeach
+
+@endsection
