@@ -12,6 +12,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
+    <!--            font awesome cheat sheet https://fontawesome.com/v4/cheatsheet/-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,7 +20,8 @@
                 extend: {
                     colors: {
                         customPurple: "#211951",
-                        customPink: "#FF2E9F"
+                        customDarkPink: "#FF2E9F",
+                        customLightPink: "#FFCAD4"
                     },
                 },
             },
@@ -54,19 +56,19 @@
         <div class="relative border-2 border-gray-100 m-4 rounded-lg">
             <div class="absolute top-4 left-3">
                 <i
-                    class="fa fa-search text-customPurple z-20 hover:text-customPurple"
+                    class="fa fa-search text-customPurple z-20"
                 ></i>
             </div>
             <input
                 type="text"
                 name="search"
-                class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
+                class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none hover:bg-customLightPink"
                 placeholder="Search Anime"
             />
             <div class="absolute top-2 right-2">
                 <button
                     type="submit"
-                    class="h-10 w-20 text-white rounded-lg bg-customPurple hover:bg-customPink active:bg-customPurple"
+                    class="h-10 w-20 text-white rounded-lg bg-customPurple hover:bg-customDarkPink active:bg-customPurple"
                 >
                     Search
                 </button>
@@ -78,222 +80,336 @@
         class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
     >
         <!-- Item 1 -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-6">
+        <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="images/acme.png"
+                    src="Frieren Beyond Journey's End.jpg"
                     alt=""
                 />
                 <div>
-                    <h3 class="text-2xl">
-                        <a href="show.html">Senior customPurple Developer</a>
-                    </h3>
-                    <div class="text-xl font-bold mb-4">Acme Corp</div>
+                    <div class="">
+                        <h3 class="text-2xl hover:text-customDarkPink">
+                            <a href="show.html">Frieren: Beyond Journey's End</a>
+                        </h3>
+                    </div>
+                    <div class="text-md mt-2 mb-3">28 Episodes</div>
+
                     <ul class="flex">
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">customPurple</a>
+                            <a href="#">Adventure</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">API</a>
+                            <a href="#">Action</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Backend</a>
+                            <a href="#">Drama</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Vue</a>
+                            <a href="#">Fantasy</a>
                         </li>
                     </ul>
-                    <div class="text-lg mt-4">
-                        <i class="fa-solid fa-tv"></i> Boston,
-                        MA
+                    <div class="mt-4">
+                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            <li>
+                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
+                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
+                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
+                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-sm mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> Fridays at 23:00 (JST)
                     </div>
                 </div>
             </div>
         </div>
         <!-- Item 2 -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-6">
+        <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="images/stark.png"
+                    src="Frieren Beyond Journey's End.jpg"
                     alt=""
                 />
                 <div>
-                    <h3 class="text-2xl">
-                        <a href="show.html">Full-Stack Engineer</a>
-                    </h3>
-                    <div class="text-xl font-bold mb-4">
-                        Stark Industries
+                    <div class="">
+                        <h3 class="text-2xl hover:text-customDarkPink">
+                            <a href="show.html">Frieren: Beyond Journey's End</a>
+                        </h3>
                     </div>
+                    <div class="text-md mt-2 mb-3">28 Episodes</div>
+
                     <ul class="flex">
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">customPurple</a>
+                            <a href="#">Adventure</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">API</a>
+                            <a href="#">Action</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Backend</a>
+                            <a href="#">Drama</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Vue</a>
+                            <a href="#">Fantasy</a>
                         </li>
                     </ul>
-                    <div class="text-lg mt-4">
-                        <i class="fa-solid fa-tv"></i>
-                        Lawrence, MA
+                    <div class="mt-4">
+                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            <li>
+                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
+                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
+                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
+                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-sm mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> Fridays at 23:00 (JST)
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Item 3 -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-6">
+        <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="images/wayne.png"
+                    src="Frieren Beyond Journey's End.jpg"
                     alt=""
                 />
                 <div>
-                    <h3 class="text-2xl">
-                        <a href="show.html">customPurple Developer</a>
-                    </h3>
-                    <div class="text-xl font-bold mb-4">
-                        Wayne Enterprises
+                    <div class="">
+                        <h3 class="text-2xl hover:text-customDarkPink">
+                            <a href="show.html">Frieren: Beyond Journey's End</a>
+                        </h3>
                     </div>
+                    <div class="text-md mt-2 mb-3">28 Episodes</div>
+
                     <ul class="flex">
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">customPurple</a>
+                            <a href="#">Adventure</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">API</a>
+                            <a href="#">Action</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Backend</a>
+                            <a href="#">Drama</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Vue</a>
+                            <a href="#">Fantasy</a>
                         </li>
                     </ul>
-                    <div class="text-lg mt-4">
-                        <i class="fa-solid fa-tv"></i> Newark,
-                        NJ
+                    <div class="mt-4">
+                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            <li>
+                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
+                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
+                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
+                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-sm mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> Fridays at 23:00 (JST)
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Item 4 -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-6">
+        <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="images/skynet.png"
+                    src="Frieren Beyond Journey's End.jpg"
                     alt=""
                 />
                 <div>
-                    <h3 class="text-2xl">
-                        <a href="show.html">Backend customPurple Dev</a>
-                    </h3>
-                    <div class="text-xl font-bold mb-4">
-                        Skynet Systems
+                    <div class="">
+                        <h3 class="text-2xl hover:text-customDarkPink">
+                            <a href="show.html">Frieren: Beyond Journey's End</a>
+                        </h3>
                     </div>
+                    <div class="text-md mt-2 mb-3">28 Episodes</div>
+
                     <ul class="flex">
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            customPurple
+                            <a href="#">Adventure</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            API
+                            <a href="#">Action</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            Backend
+                            <a href="#">Drama</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            Vue
+                            <a href="#">Fantasy</a>
                         </li>
                     </ul>
-                    <div class="text-lg mt-4">
-                        <i class="fa-solid fa-tv"></i>
-                        Daytona, FL
+                    <div class="mt-4">
+                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            <li>
+                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
+                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
+                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
+                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-sm mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> Fridays at 23:00 (JST)
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Item 5 -->
-        <div class="bg-gray-50 border border-gray-200 rounded p-6">
+        <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="images/wonka.png"
+                    src="Frieren Beyond Journey's End.jpg"
                     alt=""
                 />
                 <div>
-                    <h3 class="text-2xl">
-                        <a href="show.html">Junior Developer</a>
-                    </h3>
-                    <div class="text-xl font-bold mb-4">
-                        Wonka Industries
+                    <div class="">
+                        <h3 class="text-2xl hover:text-customDarkPink">
+                            <a href="show.html">Frieren: Beyond Journey's End</a>
+                        </h3>
                     </div>
+                    <div class="text-md mt-2 mb-3">28 Episodes</div>
+
                     <ul class="flex">
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">customPurple</a>
+                            <a href="#">Adventure</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">API</a>
+                            <a href="#">Action</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Backend</a>
+                            <a href="#">Drama</a>
                         </li>
                         <li
                             class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Vue</a>
+                            <a href="#">Fantasy</a>
                         </li>
                     </ul>
-                    <div class="text-lg mt-4">
-                        <i class="fa-solid fa-tv"></i> San
-                        Francisco, CA
+                    <div class="mt-4">
+                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            <li>
+                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
+                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
+                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
+                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-sm mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> Fridays at 23:00 (JST)
                     </div>
                 </div>
             </div>
@@ -304,12 +420,12 @@
 <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-customPurple text-white h-24 mt-24 opacity-90 md:justify-center"
 >
-    <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+    <p class="ml-2">Copyright &copy; 2024, All Rights reserved</p>
 
     <a
         href="create.html"
         class="absolute top-1/3 right-10 bg-customPurple text-white py-2 px-5"
-    >Post Job</a
+    >Post Anime</a
     >
 </footer>
 </body>
