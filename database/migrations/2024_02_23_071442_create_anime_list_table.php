@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('start_aired_date');
             $table->date('end_aired_date');
             $table->string('broadcast');
-            $table->string('studios');
+            $table->string('studio');
             $table->string('website');
             $table->string('streaming_platforms');
             $table->timestamps();

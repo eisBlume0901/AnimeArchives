@@ -1,8 +1,11 @@
+
 @extends('layout')
 
 @section('content')
 @include('partials._search')
-    <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
+
+<div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
+
 @if(count($animeList) == 0)
     <h2>No listings found</h2>
 @endif
@@ -13,20 +16,21 @@
                 {{--                Have to update the hidden attribute--}}
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="../Frieren%20Beyond%20Journey's%20End.jpg"
+{{--                    not showing anything with the animeDirectoryDummy have to be configured--}}
+                    src="animeDirectoryDummy/Frieren_Beyond_Journey's_End.jpg"
                     alt=""
                 />
                 <div>
                     <div class="">
                         <h3 class="text-2xl text-customPurple text-customPurple hover:text-customDarkPink">
-                            <a href="show.html">{{$animeElement->title}}</a>
+                            <a href="/anime/{{$animeElement->id}}">{{$animeElement->title}}</a>
                         </h3>
                     </div>
                     <div class="text-md text-customPurple mt-2 mb-3">{{$animeElement->episodes}} Episodes</div>
 
                     <ul class="flex">
                         @php
-                            $genres = explode(',', $animeElement->genres);
+                            $genres = array_map('trim', explode(',', $animeElement->genres));
                         @endphp
                         @foreach($genres as $genre)
                         <li
@@ -41,7 +45,7 @@
                         <h4 class="mb-2 text-lg text-customPurple">Streaming Platforms</h4>
                         <ul class="list-none flex flex-row gap-3">
                             @php
-                                $streamingPlatforms = explode(',', $animeElement->streaming_platforms);
+                                $streamingPlatforms = array_map('trim', explode(',', $animeElement->streaming_platforms));
                                 $streamingPlatformsUrlsWithLogos =
                                 [
 
@@ -75,11 +79,11 @@
                             @endphp
                             @foreach($streamingPlatforms as $streamingPlatform)
                             <li>
-                                <a href="{{$streamingPlatformsUrlsWithLogos[trim($streamingPlatform)]['url']}}">
+                                <a href="{{$streamingPlatformsUrlsWithLogos[$streamingPlatform]['url']}}" target="_blank">
                                     <img
                                         width="30"
                                         class="rounded-2xl bg-white border-2 border-customLightPink"
-                                        src="{{$streamingPlatformsUrlsWithLogos[trim($streamingPlatform)]['logo']}}"
+                                        src="{{$streamingPlatformsUrlsWithLogos[$streamingPlatform]['logo']}}"
                                         alt="{{$streamingPlatform}} logo"
                                     />
                                 </a>

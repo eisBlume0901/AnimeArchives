@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
                 'start_aired_date' => '2023-09-29',
                 'end_aired_date' => '2024-03-22',
                 'broadcast' => 'Fridays at 23:00 (JST)',
-                'studios' => 'Madhouse',
+                'studio' => 'Madhouse',
                 'website' => 'https://frieren-anime.jp',
                 'streaming_platforms' => 'Crunchyroll, Netflix, Aniplus TV, Bilibili Global, Muse Asia'
             ]

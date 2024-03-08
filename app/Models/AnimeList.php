@@ -16,4 +16,5 @@ class AnimeList extends Model
      * @var string
      */
     protected $table = 'anime_list'; // specify the table name or else the php artisan migrate:refresh --seed will not work
+
 }

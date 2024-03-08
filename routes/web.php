@@ -21,7 +21,7 @@ use App\Models\AnimeList; // Importing the AnimeList class from the Models folde
 Route::get('/anime/{id}', function ($id) {
     return view('anime',
         [
-            'anime' => AnimeList::find($id) // Retrieved from the AnimeList Model
+            'anime' => AnimeList::where('id', $id)->first() // Retrieved from the AnimeList Model where the id is equal to the id passed in the URL
         ]);
 })->where('id', '[0-9]+'); // This is a regular expression that ensures that the id is a number
 

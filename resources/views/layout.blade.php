@@ -33,8 +33,8 @@
 <nav class="flex justify-between items-center mb-4 bg-customPurple">
     {{--    We have to link back to our home page which is the animeList.blade.php template--}}
     <a href="/"
-        {{--       Instead of using images/logo.png, we can use the asset() function to fetch the image from the public directory.--}}
-    ><img class="w-40 mx-10" src="{{asset('images/logo.png')}}" alt="" class="logo"
+    {{--       Instead of using images/logo.png, we can use the asset() function to fetch the image from the public directory.--}}
+    ><img class="w-40 mx-10" src="{{asset('images/logo.png')}}" alt="/" class="logo"
         /></a>
     <ul class="flex flex-col mx-10 text-lg text-customPurple">
         <li class="my-1.5">
