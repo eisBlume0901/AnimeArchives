@@ -37,7 +37,7 @@
                             class="flex items-center justify-center bg-customPurple text-white hover:text-customLightPink hover:bg-customDarkPink rounded-xl py-1 px-3 mr-2 text-xs"
                         >
 
-                                <a href="#">{{$genre}}</a>
+                                <a href="{{$genre}}">{{$genre}}</a>
                         </li>
                         @endforeach
                     </ul>

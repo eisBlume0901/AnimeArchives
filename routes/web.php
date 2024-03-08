@@ -19,11 +19,18 @@ use App\Models\AnimeList; // Importing the AnimeList class from the Models folde
 // Retrieves a specific anime posting from the AnimeList model and passes it to the view
 // http://127.0.0.1:8000/anime/1 (will retrieve the anime with id 1, which is Frieren: Beyond's Journey's End)
 Route::get('/anime/{id}', function ($id) {
-    return view('anime',
-        [
-            'anime' => AnimeList::where('id', $id)->first() // Retrieved from the AnimeList Model where the id is equal to the id passed in the URL
-        ]);
-})->where('id', '[0-9]+'); // This is a regular expression that ensures that the id is a number
+    $anime = AnimeList::where('id', $id)->first();
+
+    if ($anime) {
+        return view('anime',
+            [
+            'anime' => $anime
+            ]);
+    } else {
+        abort('404'); // If the anime is not found, return a 404 error
+    }
+
+});
 
 // Home page http://127.0.0.1:8000/
 // Retrieves all the anime postings from the AnimeList model and passes them to the view
