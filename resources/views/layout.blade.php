@@ -55,13 +55,13 @@
 </main>
 </body>
 <footer
-    class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-customPurple text-white hover:text-customLightPink hover:bg-customDarkPink h-24 mt-24 opacity-90 md:justify-center"
+    class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-customPurple text-white h-24 mt-24 opacity-90 md:justify-center"
 >
     <p class="ml-2">Copyright &copy; 2024, All Rights reserved</p>
 
     <a
         href="create.html"
-        class="absolute top-1/3 right-10 bg-customPurple text-white hover:text-customLightPink hover:bg-customDarkPink py-2 px-5"
+        class="absolute top-1/3 right-10 bg-customPurple text-white hover:text-customLightPink hover:rounded-lg hover:bg-customDarkPink py-2 px-5"
     >Post Anime</a
     >
 </footer>
