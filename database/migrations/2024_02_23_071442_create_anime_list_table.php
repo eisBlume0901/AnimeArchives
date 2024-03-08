@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('broadcast');
             $table->string('studios');
             $table->string('website');
-            $table->string('streaming platforms');
+            $table->string('streaming_platforms');
             $table->timestamps();
         });
     }

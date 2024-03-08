@@ -10,71 +10,89 @@
 @foreach ($animeList as $animeElement)
         <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
-{{--                Have to update the hidden attribute--}}
+                {{--                Have to update the hidden attribute--}}
                 <img
                     class="hidden w-48 mr-6 md:block"
-                    src="Frieren Beyond Journey's End.jpg"
+                    src="../Frieren%20Beyond%20Journey's%20End.jpg"
                     alt=""
                 />
                 <div>
                     <div class="">
-                        <h3 class="text-2xl hover:text-customDarkPink">
-{{--                            Instead of using the [] notation (i.e., {{$animeElement['title']}}),--}}
-{{--                            we can use the Eloquent model to fetch data from the database.--}}
-{{--                            This is a more object-oriented approach and is the recommended way to--}}
-{{--                            fetch data from the database.--}}
-                            <a href="./anime/{{$animeElement->id}}">{{$animeElement->title}}</a>
+                        <h3 class="text-2xl text-customPurple text-customPurple hover:text-customDarkPink">
+                            {{--                            Instead of using the [] notation (i.e., {{$animeElement['title']}}),--}}
+                            {{--                            we can use the Eloquent model to fetch data from the database.--}}
+                            {{--                            This is a more object-oriented approach and is the recommended way to--}}
+                            {{--                            fetch data from the database.--}}
+                            <a href="show.html">{{$animeElement->title}}</a>
                         </h3>
                     </div>
-                    <div class="text-md mt-2 mb-3">{{$animeElement->episodes}} Episodes</div>
+                    <div class="text-md text-customPurple mt-2 mb-3">{{$animeElement->episodes}} Episodes</div>
 
                     <ul class="flex">
+                        @php
+                            $genres = explode(',', $animeElement->genres);
+                        @endphp
+                        @foreach($genres as $genre)
                         <li
-                            class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
+                            class="flex items-center justify-center bg-customPurple text-white hover:text-customLightPink hover:bg-customDarkPink rounded-xl py-1 px-3 mr-2 text-xs"
                         >
-                            <a href="#">Adventure</a>
+
+                                <a href="#">{{$genre}}</a>
                         </li>
-                        <li
-                            class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                        >
-                            <a href="#">Action</a>
-                        </li>
-                        <li
-                            class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                        >
-                            <a href="#">Drama</a>
-                        </li>
-                        <li
-                            class="flex items-center justify-center bg-customPurple text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                        >
-                            <a href="#">Fantasy</a>
-                        </li>
+                        @endforeach
                     </ul>
                     <div class="mt-4">
-                        <h4 class="mb-2 text-lg">Streaming Platforms</h4>
-                        <ul class="flex flex-row gap-3">
+                        <h4 class="mb-2 text-lg text-customPurple">Streaming Platforms</h4>
+                        <ul class="list-none flex flex-row gap-3">
+                            @php
+                                $streamingPlatforms = explode(',', $animeElement->streaming_platforms);
+                                $streamingPlatformsUrlsWithLogos =
+                                [
+
+                                        'Crunchyroll' =>
+                                            [
+                                                'url' => 'https://www.crunchyroll.com/',
+                                                'logo' => 'https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png'
+                                            ],
+                                         'Netflix' =>
+                                            [
+                                                'url' => 'https://www.netflix.com/',
+                                                'logo' => 'https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003'
+                                            ],
+                                        'Aniplus TV' =>
+                                            [
+                                                'url' => 'https://www.aniplus-asia.com/',
+                                                'logo' => 'https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain'
+                                            ],
+                                        'Bilibili Global' =>
+                                            [
+                                                'url' => 'https://www.bilibili.tv/',
+                                                'logo' => 'https://img.icons8.com/color/452/bilibili.png'
+                                            ],
+                                        'Muse Asia' =>
+                                            [
+                                                'url' => 'https://en.e-muse.com.tw/',
+                                                'logo' => 'https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain'
+                                            ]
+
+                                ];
+                            @endphp
+                            @foreach($streamingPlatforms as $streamingPlatform)
                             <li>
-                                <a href="https://www.crunchyroll.com"><img src="https://cdn.iconscout.com/icon/free/png-512/crunchyroll-4062809-3357695.png"
-                                                                           alt="Crunchyroll logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
+                                <a href="{{$streamingPlatformsUrlsWithLogos[trim($streamingPlatform)]['url']}}">
+                                    <img
+                                        width="30"
+                                        class="rounded-2xl bg-white border-2 border-customLightPink"
+                                        src="{{$streamingPlatformsUrlsWithLogos[trim($streamingPlatform)]['logo']}}"
+                                        alt="{{$streamingPlatform}} logo"
+                                    />
+                                </a>
                             </li>
-                            <li>
-                                <a href="https://www.netflix.com"><img src="https://vignette2.wikia.nocookie.net/logopedia/images/b/b2/NetflixIcon2016.jpg/revision/latest/scale-to-width-down/2000?cb=20160620223003"
-                                                                       alt="Netflix logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="https://th.bing.com/th/id/OIP.BZDUzewveeEejbZ5rdSetQHaHa?rs=1&pid=ImgDetMain"
-                                                alt="Aniplus TV logo" width="30" back class="rounded-2xl bg-white border-2 border-customLightPink"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="https://img.icons8.com/color/452/bilibili.png" alt="Bilibili Global logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain" alt="Muse Asia logo" width="30" class="rounded-2xl bg-white border-2 border-customLightPink"></a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
-                    <div class="text-sm mt-4 mx-1.5">
-                        <i class="fa-solid fa-tv mr-1"></i>{{$animeElement->broadcast}}
+                    <div class="text-customPurple mt-4 mx-1.5">
+                        <i class="fa-solid fa-tv mr-1"></i> {{$animeElement->broadcast}}
                     </div>
                 </div>
             </div>

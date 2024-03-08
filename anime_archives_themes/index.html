@@ -40,7 +40,7 @@
             ><i class="mx-1.5 fa-solid fa-user text-white hover:text-customLightPink"></i> Register</a
             >
         </li>
-        <li class="my-1.5" style="h">
+        <li class="my-1.5">
             <a href="login.html" class="text-white hover:text-customLightPink hover:bg-customDarkPink"
             ><i class="mx-1.5 fa-solid fa-arrow-right-to-bracket text-white hover:text-customLightPink hover:bg-customDarkPink"></i>
                 Login</a
@@ -82,6 +82,7 @@
         <!-- Item 1 -->
         <div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
             <div class="flex">
+                {{--                Have to update the hidden attribute--}}
                 <img
                     class="hidden w-48 mr-6 md:block"
                     src="../Frieren%20Beyond%20Journey's%20End.jpg"
@@ -90,6 +91,10 @@
                 <div>
                     <div class="">
                         <h3 class="text-2xl text-customPurple text-customPurple hover:text-customDarkPink">
+                {{--                            Instead of using the [] notation (i.e., {{$animeElement['title']}}),--}}
+                {{--                            we can use the Eloquent model to fetch data from the database.--}}
+                {{--                            This is a more object-oriented approach and is the recommended way to--}}
+                {{--                            fetch data from the database.--}}
                             <a href="show.html">Frieren: Beyond Journey's End</a>
                         </h3>
                     </div>

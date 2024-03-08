@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
                 'broadcast' => 'Fridays at 23:00 (JST)',
                 'studios' => 'Madhouse',
                 'website' => 'https://frieren-anime.jp',
-                'streaming platforms' => 'Crunchyroll, Netflix, Aniplus TV, Bilibili Global, Muse Asia'
+                'streaming_platforms' => 'Crunchyroll, Netflix, Aniplus TV, Bilibili Global, Muse Asia'
             ]
         );
     }
