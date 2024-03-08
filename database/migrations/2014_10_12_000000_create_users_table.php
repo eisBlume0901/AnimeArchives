@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            //Suggested to add another entry which is users, admin classification
         });
     }
 

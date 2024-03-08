@@ -70,6 +70,15 @@ Use when?
 Migration - is a way to define the structure of the database. It is a file that contains the schema of the database.
 Seeder - populates the database with the default data. It is a file that contains the default data of the database.
 
+
+php artisan make:factory FactoryName - use to create a new factory. It generates a new factory file in the database/factories
+
+Use when?
+1. When you want to create a new factory, you should run this command.
+2. When you want to create a new factory with the model file, you should run this command.
+3. When you want to create a new factory with the seeder file, you should run this command.
+
+
 ------------------------------------------------------------------------------------------------------------------------
 Layman's term explanation:
 php artisan config:cache - This command is like a librarian who gathers all the books (configuration files) in a library
@@ -94,7 +103,11 @@ a real-world object or concept in your application.
 php artisan serve - This command is like opening the doors to a shop. It starts the server, allowing people (users)
 to visit your application.
 
+php artisan make:factory FactoryName - This command is like a factory that produces products. It creates a new factory
+file that can be used to generate data for your application.
+
 Migration - This is like a blueprint for a building. It describes how a database table should be constructed.
 Seeder - This is like a packet of seeds. It contains data that can be planted in a database.
 Rollback - This is like undoing a change. It reverts the database to a previous state.
 Refresh - This is like starting over. It reverts the database to its original state and then applies all the migrations again.
+Factory - This is like a machine that produces products. It generates data for your application.
