@@ -19,10 +19,6 @@
                 <div>
                     <div class="">
                         <h3 class="text-2xl text-customPurple text-customPurple hover:text-customDarkPink">
-                            {{--                            Instead of using the [] notation (i.e., {{$animeElement['title']}}),--}}
-                            {{--                            we can use the Eloquent model to fetch data from the database.--}}
-                            {{--                            This is a more object-oriented approach and is the recommended way to--}}
-                            {{--                            fetch data from the database.--}}
                             <a href="show.html">{{$animeElement->title}}</a>
                         </h3>
                     </div>
