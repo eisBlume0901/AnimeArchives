@@ -11,13 +11,11 @@
 @endif
 
 @foreach ($animeList as $animeElement)
-    <x-card class="hover:bg-customLightPink">
-        <x-anime-card :animeElement="$animeElement"></x-anime-card>
-{{--        The x-card component is a custom Blade component that we created in card.blade.php.--}}
-{{--        We also included the attributes and slot properties in the x-card component.--}}
-{{--        The attributes property is a collection of all the attributes passed to the component such as class, id, and style.--}}
-{{--        The slot property is a placeholder for the content that will be passed from the parent component to the child component.--}}
-    </x-card>
+        <x-anime-card :animeElement="$animeElement">
+            {{--The x-anime-card component is a custom Blade component that we created in anime-card.blade.php.--}}
+            {{--We also included the animeElement property in the x-anime-card component.--}}
+            {{--The animeElement is an instance of the Anime model.--}}
+        </x-anime-card>
 @endforeach
     </div>
 @endsection
