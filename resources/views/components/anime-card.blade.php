@@ -4,7 +4,7 @@
 {{--is resources/views/components/anime-card.blade.php. The animeElement is the data that is being passed --}}
 {{--from the parent component to the child component. The animeElement is an instance of the Anime model.--}}
 
-<x-card>
+<x-card class="hover:bg-customLightPink">
     <div class="flex">
         {{--                Have to update the hidden attribute--}}
         <img
