@@ -28,17 +28,7 @@
                 <div class="text-xl font-bold mb-4 text-customPurple">
                     Studio {{$anime->studio}}
                 </div>
-                <ul class="flex">
-                    @php
-                        $genres = array_map('trim', explode(',', $anime->genres));
-                    @endphp
-                    @foreach($genres as $genre)
-                    <li
-                        class="bg-customPurple text-white rounded-xl px-3 py-1 mr-2 hover:text-customLightPink hover:bg-customDarkPink"
-                    >
-                        <a href="#">{{$genre}}</a>
-                    @endforeach
-                </ul>
+                  <x-anime-genres :genresCSV="$anime->genres"></x-anime-genres>
                 <div class="text-lg text-customPurple my-4">
                     <i class="fa-solid fa-tv"></i> {{$anime->broadcast}}
                 </div>
