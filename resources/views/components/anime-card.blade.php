@@ -23,7 +23,6 @@
 {{--            Use a x-card template (Blade custom component) card.blade.php--}}
             <x-anime-genres :genresCSV="$animeElement->genres"></x-anime-genres>
             <x-anime-streaming-platforms :streamingPlatformsCSV="$animeElement->streaming_platforms"></x-anime-streaming-platforms>
-            I used an x-card template
             <div class="text-customPurple mt-4 mx-1.5">
                 <i class="fa-solid fa-tv mr-1"></i> {{$animeElement->broadcast}}
             </div>
