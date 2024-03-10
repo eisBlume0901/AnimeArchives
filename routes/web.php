@@ -25,7 +25,9 @@ use Illuminate\Support\Facades\Route;
 //        ]);
 //});
 // Use a controller instead of Implicit Route Model Binding as shown above
-Route::get('/anime/{animeEntry}', [AnimeListController::class, 'show']);
+Route::get('/anime/{animeElement}', [AnimeListController::class, 'show']);
+// for the anime/{animeElement} check the controller. If the name is different, it will not work
+// because animeElement is an object of the AnimeList model
 
 // Home page http://127.0.0.1:8000/
 // Retrieves all the anime postings from the AnimeList model and passes them to the view

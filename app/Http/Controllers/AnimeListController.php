@@ -24,10 +24,10 @@ class AnimeListController extends Controller
     }
 
     // Show a specific anime
-    public function show(AnimeList $animeEntry) {
+    public function show(AnimeList $animeElement) {
         return view('anime',
             [
-                'anime' => $animeEntry
+                'anime' => $animeElement
             ]);
     }
 }

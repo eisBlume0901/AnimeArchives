@@ -1,0 +1,8 @@
+Common Resource Routes to be used for Controller
+- index: show all resources (e.g., all anime)
+- show: show a single resource (e.g., anime)
+- create: show a form to create a new resource (e.g., new anime form)
+- store: save a new resource to the database (e.g., save new anime to database)
+- edit: show a form to edit a resource (e.g., edit anime form)
+- update: save an edited resource to the database (e.g., save edited anime to database)
+- destroy: delete a resource from the database (e.g., delete anime from database)
