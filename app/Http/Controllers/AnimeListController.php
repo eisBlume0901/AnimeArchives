@@ -16,7 +16,7 @@ class AnimeListController extends Controller
 
     // Show all anime lists
     public function index() {
-        return view('animeList',
+        return view('animeList/index', // animeList.blade.php changed to index.blade.php (animeList/index or animeList/index is accepted)
             [
                 'heading' => 'List of Latest AnimeList',
                 'animeList' => AnimeList::all()
@@ -25,7 +25,7 @@ class AnimeListController extends Controller
 
     // Show a specific anime
     public function show(AnimeList $animeElement) {
-        return view('anime',
+        return view('animeList.show', // anime.blade.php changed to show.blade.php (animeList/show or animeList.show) is accepted)
             [
                 'anime' => $animeElement
             ]);
