@@ -31,7 +31,7 @@
 </head>
 <body class="mb-48">
 <nav class="flex justify-between items-center mb-4 bg-customPurple">
-    {{--    We have to link back to our home page which is the animeList.blade.php template--}}
+    {{--    We have to link back to our home page which is the index.blade.php template--}}
     <a href="/"
     {{--       Instead of using images/logo.png, we can use the asset() function to fetch the image from the public directory.--}}
     ><img class="w-40 mx-10" src="{{asset('images/logo.png')}}" alt="/" class="logo"
