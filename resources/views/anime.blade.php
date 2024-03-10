@@ -4,13 +4,14 @@
 @include('partials._search')
     <!doctype html>
 <html lang="en">
+<body>
     <a
         href="index.html"
         class="inline-block text-customPurple ml-4 mb-4"
     ><i class="fa-solid fa-arrow-left"></i> Back
     </a>
     <div class="mx-4">
-        <div class="bg-gray-50 border border-gray-200 p-10 rounded">
+        <x-card class="p-10">
             <div
                 class="flex flex-col items-center justify-center text-center"
             >
@@ -64,9 +65,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </x-card>
     </div>
-</main>
+
+
 
 <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-customPurple text-white h-24 mt-24 opacity-90 md:justify-center"

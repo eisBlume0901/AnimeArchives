@@ -1,6 +1,10 @@
 @props(['animeElement'])
+{{--The purpose of props is to allow the parent component to pass data to the child component. --}}
+{{--In this case, the parent component is resources/views/animeList.blade.php and the child component --}}
+{{--is resources/views/components/anime-card.blade.php. The animeElement is the data that is being passed --}}
+{{--from the parent component to the child component. The animeElement is an instance of the Anime model.--}}
 
-<div class="bg-gray-50 border border-gray-200 rounded p-6 hover:bg-customLightPink">
+<x-card>
     <div class="flex">
         {{--                Have to update the hidden attribute--}}
         <img
@@ -85,4 +89,4 @@
             </div>
         </div>
     </div>
-</div>
+</x-card>
