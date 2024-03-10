@@ -87,6 +87,14 @@ Use when?
 2. When you want to update the application key, you should run this command.
 3. When you want to reset the application key, you should run this command.
 
+php artisan make:controller ControllerName - use to create a new controller.
+It generates a new controller file in the app/Http/Controllers directory.
+
+Use when?
+1. When you want to create a new controller, you should run this command.
+2. When you want to create a new controller with the model file, you should run this command.
+3. When you want to create a new controller with the factory file, you should run this command.
+4. When you want to create a new controller with the seeder file, you should run this command.
 
 ------------------------------------------------------------------------------------------------------------------------
 Layman's term explanation:
@@ -114,6 +122,12 @@ to visit your application.
 
 php artisan make:factory FactoryName - This command is like a factory that produces products. It creates a new factory
 file that can be used to generate data for your application.
+
+php artisan key:generate - This command is like a locksmith. It creates a new key (application key) that can be used
+to unlock the doors of your application.
+
+php artisan make:controller ControllerName - This command is like a chef. It creates a new chef (controller) that can
+prepare and serve different dishes (responses) to the customers (users).
 
 Migration - This is like a blueprint for a building. It describes how a database table should be constructed.
 Seeder - This is like a packet of seeds. It contains data that can be planted in a database.
