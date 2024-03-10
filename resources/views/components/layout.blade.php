@@ -51,7 +51,16 @@
     </ul>
 </nav>
 <main>
-    @yield('content')
+{{--    @yield('content')--}}
+    {{$slot}}
+{{--    Yield vs Slot--}}
+{{--    Yield is used to define sections in a layout file, and the section is then filled in by the content of the view file. --}}
+{{--    Slot is used to define sections in a component file, and the section is then filled in by the content of the parent file.--}}
+{{--    The difference between yield and slot is that yield is used in the layout file, and slot is used in the component file.--}}
+{{--    The yield directive is used to define sections in a layout file, and the section is then filled in by the content of the view file.--}}
+{{--    The slot directive is used to define sections in a component file, and the section is then filled in by the content of the parent file.--}}
+{{--    The yield directive is used to define sections in a layout file, and the section is then filled in by the content of the view file.--}}
+{{--    The slot directive is used to define sections in a component file, and the section is then filled in by the content of the parent file.--}}
 </main>
 </body>
 <footer
