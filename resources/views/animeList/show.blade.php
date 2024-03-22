@@ -1,7 +1,6 @@
 <x-layout>
-@section('content')
 @include('partials._search')
-    <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <body>
 <a
