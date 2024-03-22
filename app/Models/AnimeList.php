@@ -22,7 +22,15 @@ class AnimeList extends Model
         if ($filters['genre'] ?? false) { // If the genre filter exists
             $query->where('genres', 'like', '%' .request('genre') . '%');
             /* Example:
-             * SELECT * FROM anime_list WHERE genres like '%Action%';
+             * SELECT * FROM anime_list WHERE genres like '%Adventure%';
+             */
+        }
+
+        if ($filters['search'] ?? false) { // If the search filter exists
+            $query->where('title', 'like', '%' .request('search') . '%')
+                ->orWhere('description', 'like', '%' .request('search') . '%');
+            /* Example:
+             * SELECT * FROM anime_list WHERE title like '%Frieren%' or description like '%Elf%';
              */
         }
     }

@@ -32,7 +32,7 @@ class AnimeListController extends Controller
         return view('animeList/index', // animeList.blade.php changed to index.blade.php (animeList/index or animeList/index is accepted)
             [
                 'heading' => 'List of Latest AnimeList',
-                'animeList' => AnimeList::latest()->filter(request(['genre']))->get()// The request uses genre which is singular because we for loop each genre in the anime_genres.blade.php
+                'animeList' => AnimeList::latest()->filter(request(['genre', 'search']))->get()// The request uses genre which is singular because we for loop each genre in the anime_genres.blade.php
             ]);
 
         /*
