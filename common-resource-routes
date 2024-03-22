@@ -6,3 +6,7 @@ Common Resource Routes to be used for Controller
 - edit: show a form to edit a resource (e.g., edit anime form)
 - update: save an edited resource to the database (e.g., save edited anime to database)
 - destroy: delete a resource from the database (e.g., delete anime from database)
+
+Genres
+- use scope filtering to show all anime of a specific genre
+scopeFilter()

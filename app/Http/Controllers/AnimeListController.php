@@ -15,12 +15,31 @@ class AnimeListController extends Controller
      */
 
     // Show all anime lists
+    /*
+     * Retrieving request in two methods
+     * 1. Dependency Injection (Request $request) - This is the recommended way to retrieve the request object in Laravel controller methods
+     * public function index(Request $request)) {
+     *    dd($request);
+     * }
+     * 2. Request helper function (request()) - This is the global helper function that can be used to retrieve the request object in Laravel controller methods
+     * public function index() {
+     *   dd(request());
+     * }
+     */
     public function index() {
+//        dd(request('genre')); // Retrieve the genre query parameter from the URL, dd is for debugging purposes
+
         return view('animeList/index', // animeList.blade.php changed to index.blade.php (animeList/index or animeList/index is accepted)
             [
                 'heading' => 'List of Latest AnimeList',
-                'animeList' => AnimeList::all()
+                'animeList' => AnimeList::latest()->filter(request(['genre']))->get()// The request uses genre which is singular because we for loop each genre in the anime_genres.blade.php
             ]);
+
+        /*
+        AnimeList::all() vs AnimeList::latest()->get()
+        AnimeList::all() - This retrieves all the anime postings from the anime_list table in the database
+        AnimeList::latest()->get() - This retrieves all the anime postings from the anime_list table in the database and sorts them by the latest created_at date
+        */
     }
 
     // Show a specific anime
