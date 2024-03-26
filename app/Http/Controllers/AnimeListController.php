@@ -49,4 +49,15 @@ class AnimeListController extends Controller
                 'anime' => $animeElement
             ]);
     }
+
+    // Show create form
+    public function create() {
+        return view('animeList/create'); // Refer to the directory of views folder not the route one
+    }
+
+    // Store anime data
+    public function store(Request $request) { // dependency injection
+//        dd($request->all()); // dd is for debugging purposes
+
+    }
 }
