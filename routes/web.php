@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AnimeListController::class, 'index']);
 
 
-// Show create form
+// Show create form // Change this to POST since the form's method is declared as POST
 // Have to declared first before the show method because it will be treated as a parameter
 Route::get('/anime/create', [AnimeListController::class, 'create']);
 

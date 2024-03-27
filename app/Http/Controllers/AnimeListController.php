@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\AnimeList; // Importing the AnimeList class from the Models folder
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class AnimeListController extends Controller
 {
@@ -58,6 +59,21 @@ class AnimeListController extends Controller
     // Store anime data
     public function store(Request $request) { // dependency injection
 //        dd($request->all()); // dd is for debugging purposes
+        $formFields = $request->validate([
+            'title' => 'required',
+            'description' => ['required', Rule::unique('anime_list', 'description')],
+            'episodes' => ['required', 'integer', 'min:1'],
+            'genres' => 'required',
+            'start_aired_date' => 'required',
+            'end_aired_date' => 'required',
+            'broadcast' => 'required',
+            'studio' => 'required',
+            'website' => ['required', 'url'],
+            'streaming_platforms' => 'required'
+        ]);
 
+        AnimeList::create($formFields); // Store the anime data in the database (anime_list table
+
+        return redirect('/'); // Redirect to the home page after storing the anime data
     }
 }

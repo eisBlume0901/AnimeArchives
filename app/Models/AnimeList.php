@@ -16,6 +16,8 @@ class AnimeList extends Model
      * @var string
      */
     protected $table = 'anime_list'; // specify the table name or else the php artisan migrate:refresh --seed will not work
+    protected $fillable = ['title', 'description', 'episodes', 'genres', 'start_aired_date', 'end_aired_date', 'broadcast', 'studio', 'website', 'streaming_platforms'];
+    // The fillable property specifies which attributes should be mass-assignable.
 
     public function scopeFilter($query, array $filters) { // The name of this function should not be renamed. It is a Laravel convention to name it scopeFilter
         // please see the AnimeListController for the usage of this function (AnimeList::latest()->filter(request(['genre']))->get()))
@@ -34,4 +36,6 @@ class AnimeList extends Model
              */
         }
     }
+
+
 }

@@ -24,6 +24,10 @@
                     name="title"
                     id="title"
                 />
+
+                @error('title')
+                    <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -40,6 +44,11 @@
                     rows="10"
                     placeholder="The story is all about..."
                 ></textarea>
+
+                @error('description')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
+
             </div>
 
             <div class="mb-6">
@@ -52,6 +61,11 @@
                     name="episodes"
                     id="episodes"
                 />
+
+                @error('episodes')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
+
             </div>
 
             <div class="mb-6">
@@ -65,6 +79,11 @@
                     id="genres"
                     placeholder="Example: Adventure, Comedy, etc"
                 />
+
+                @error('genres')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
+
             </div>
 
             <div class="mb-6">
@@ -79,6 +98,10 @@
                     name="start_aired_date"
                     id="start_aired_date"
                 />
+
+                @error('start_aired_date')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -93,6 +116,10 @@
                     name="end_aired_date"
                     id="end_aired_date"
                 />
+
+                @error('end_aired_date')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -106,6 +133,10 @@
                     id="broadcast"
                     placeholder="Example: Fridays at 23:00 (JST)"
                 />
+
+                @error('broadcast')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -121,6 +152,10 @@
                     name="studio"
                     id="studio"
                 />
+
+                @error('studio')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -136,6 +171,9 @@
                     name="website"
                     id="website"
                 />
+                @error('website')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
@@ -149,6 +187,9 @@
                     id="streaming_platforms"
                     placeholder="Example: Crunchyroll, Netflix, etc"
                 />
+                @error('streaming_platforms')
+                <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-6">
