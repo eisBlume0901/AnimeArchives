@@ -23,6 +23,9 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
                     id="title"
+                    value="{{old('title')}}"
+{{--                    The old helper function retrieves the value of the input field if it exists. If the input field does not exist, it returns null.--}}
+{{--                    It is a Laravel helper function--}}
                 />
 
                 @error('title')
@@ -42,6 +45,7 @@
                     name="description"
                     id="description"
                     rows="10"
+                    value="{{old('title')}}"
                     placeholder="The story is all about..."
                 ></textarea>
 
@@ -60,6 +64,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="episodes"
                     id="episodes"
+                    value="{{old('episodes')}}"
                 />
 
                 @error('episodes')
@@ -77,6 +82,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="genres"
                     id="genres"
+                    value="{{old('genres')}}"
                     placeholder="Example: Adventure, Comedy, etc"
                 />
 
@@ -97,6 +103,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="start_aired_date"
                     id="start_aired_date"
+                    value="{{old('start_aired_date')}}"
                 />
 
                 @error('start_aired_date')
@@ -115,6 +122,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="end_aired_date"
                     id="end_aired_date"
+                    value="{{old('end_aired_date')}}"
                 />
 
                 @error('end_aired_date')
@@ -132,6 +140,7 @@
                     name="broadcast"
                     id="broadcast"
                     placeholder="Example: Fridays at 23:00 (JST)"
+                    value="{{old('broadcast')}}"
                 />
 
                 @error('broadcast')
@@ -151,6 +160,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="studio"
                     id="studio"
+                    value="{{old('studio')}}"
                 />
 
                 @error('studio')
@@ -170,6 +180,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="website"
                     id="website"
+                    value="{{old('website')}}"
                 />
                 @error('website')
                 <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
@@ -185,6 +196,7 @@
                     class="border border-gray-200 rounded p-2 w-full"
                     name="streaming_platforms"
                     id="streaming_platforms"
+                    value="{{old('streaming_platforms')}}"
                     placeholder="Example: Crunchyroll, Netflix, etc"
                 />
                 @error('streaming_platforms')
