@@ -13,6 +13,7 @@
         referrerpolicy="no-referrer"
     />
     <!--            font awesome cheat sheet https://fontawesome.com/v4/cheatsheet/-->
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -62,7 +63,6 @@
 {{--    The yield directive is used to define sections in a layout file, and the section is then filled in by the content of the view file.--}}
 {{--    The slot directive is used to define sections in a component file, and the section is then filled in by the content of the parent file.--}}
 </main>
-</body>
 <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-customPurple text-white h-24 mt-24 opacity-90 md:justify-center"
 >
@@ -74,5 +74,7 @@
     >Post Anime</a
     >
 </footer>
+
+<x-flash-message /> {{-- Include the flash message component, it does not matter if it is put below the footer because it will only be displayed when there is a flash message --}}
 </body>
 </html>

@@ -58,7 +58,6 @@ class AnimeListController extends Controller
 
     // Store anime data
     public function store(Request $request) { // dependency injection
-//        dd($request->all()); // dd is for debugging purposes
         $formFields = $request->validate([
             'title' => 'required',
             'description' => ['required', Rule::unique('anime_list', 'description')],
@@ -74,6 +73,10 @@ class AnimeListController extends Controller
 
         AnimeList::create($formFields); // Store the anime data in the database (anime_list table
 
-        return redirect('/'); // Redirect to the home page after storing the anime data
+        // Flashing message so that the user knows that the listing has been created
+        // Method 1: Using Session::flash() method, import the Session class at the top of the file (use Illuminate\Support\Facades\Session;)
+//        Session::flash('message', 'Listing Created');
+        // Method 2: Using the with() method
+        return redirect('/')->with('success', 'Anime has been added to the database successfully!'); // Redirect to the home page after storing the anime data
     }
 }

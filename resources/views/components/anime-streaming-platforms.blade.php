@@ -29,7 +29,12 @@
              [
                  'url' => 'https://en.e-muse.com.tw/',
                  'logo' => 'https://th.bing.com/th/id/OIP.PCg0iBIJYDpjE6ReDPSB1gHaHa?rs=1&pid=ImgDetMain'
-             ]
+             ],
+         'Funimation' =>
+             [
+                 'url' => 'https://www.funimation.com/',
+                 'logo' => 'https://i0.wp.com/www.theoasg.com/wp-content/uploads/2016/01/FUni.png?fit=1000%2C1000&ssl=1'
+             ],
 
     ];
 @endphp
