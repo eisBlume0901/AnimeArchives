@@ -96,6 +96,13 @@ Use when?
 3. When you want to create a new controller with the factory file, you should run this command.
 4. When you want to create a new controller with the seeder file, you should run this command.
 
+php artisan vendor:publish - use to publish the vendor files. It publishes the vendor files to the public directory.
+
+Use when?
+1. When you want to publish the vendor files, you should run this command.
+2. When you want to update the vendor files, you should run this command.
+3. When you want to reset the vendor files, you should run this command.
+
 ------------------------------------------------------------------------------------------------------------------------
 Layman's term explanation:
 php artisan config:cache - This command is like a librarian who gathers all the books (configuration files) in a library
@@ -128,6 +135,9 @@ to unlock the doors of your application.
 
 php artisan make:controller ControllerName - This command is like a chef. It creates a new chef (controller) that can
 prepare and serve different dishes (responses) to the customers (users).
+
+php artisan vendor:publish - This command is like a publisher. It publishes the vendor files (third-party packages)
+to the public directory, making them accessible to everyone.
 
 Migration - This is like a blueprint for a building. It describes how a database table should be constructed.
 Seeder - This is like a packet of seeds. It contains data that can be planted in a database.

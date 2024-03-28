@@ -15,7 +15,7 @@
             </x-anime-card>
         @endforeach
     </div>
-    <div class="mt-6 p-4 text-customPurple">
+    <div class="mt-6 p-4 text-customPurple ">
         {{$animeList->links()}}
 {{--        links() method is used to display the pagination links. The links() method is called on the $animeList variable, which is an instance of the LengthAwarePaginator class. The LengthAwarePaginator class is a paginator class that is used to paginate the results of a query. The links() method generates the pagination links that are displayed at the bottom of the page. The links() method accepts an optional parameter that specifies the number of links that should be displayed on each side of the current page. If no parameter is provided, the default value of 3 is used.--}}
     </div>
