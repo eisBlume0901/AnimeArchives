@@ -33,7 +33,9 @@ class AnimeListController extends Controller
         return view('animeList/index', // animeList.blade.php changed to index.blade.php (animeList/index or animeList/index is accepted)
             [
                 'heading' => 'List of Latest AnimeList',
-                'animeList' => AnimeList::latest()->filter(request(['genre', 'search']))->get()// The request uses genre which is singular because we for loop each genre in the anime_genres.blade.php
+                'animeList' => AnimeList::latest()->filter(request(['genre', 'search']))->simplePaginate(4)// The request uses genre which is singular because we for loop each genre in the anime_genres.blade.php
+//            paginate(numberOfItemsShownInIndex) is used to limit the number of items displayed on a page
+//            simplePaginate(numberOfItemsShownInIndex) This method is used to display the next and previous buttons for pagination
             ]);
 
         /*
